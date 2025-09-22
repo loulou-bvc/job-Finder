@@ -1,0 +1,38 @@
+{
+  "scraping": {
+    "delay_min": 1,
+    "delay_max": 3,
+    "max_pages": 5,
+    "headless": true,
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+  },
+  "email": {
+    "smtp_server": "smtp.gmail.com",
+    "smtp_port": 587,
+    "username": "",
+    "password": "",
+    "signature": "Cordialement,\n[Votre nom]"
+  },
+  "database": {
+    "offres_db": "data/offres.db",
+    "candidatures_db": "data/candidatures.db",
+    "backup_enabled": true,
+    "backup_interval_days": 7
+  },
+  "ui": {
+    "theme": "light",
+    "window_size": "1400x900",
+    "auto_refresh": true,
+    "refresh_interval_minutes": 30
+  },
+  "filters": {
+    "default_domain": "Tous",
+    "default_city": "",
+    "max_results": 1000
+  },
+  "export": {
+    "default_format": "csv",
+    "include_timestamp": true,
+    "auto_open": false
+  }
+}
