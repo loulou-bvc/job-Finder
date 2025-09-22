@@ -78,12 +78,19 @@ def main():
     print("\n🎯 Lancement de l'application...")
     
     try:
-        # Importer et lancer l'application simplifiée
-        from main_app_simple import main as app_main
-        app_main()
+        # Essayer d'abord l'application complète
+        try:
+            from main_app_complete import main as app_main
+            print("🚀 Lancement de l'application complète...")
+            app_main()
+        except ImportError:
+            # Fallback vers l'application simplifiée
+            print("⚠️ Application complète non disponible, lancement de la version simplifiée...")
+            from main_app_simple import main as app_main
+            app_main()
     except ImportError as e:
         print(f"❌ Erreur d'import: {e}")
-        print("Vérifiez que main_app_simple.py existe")
+        print("Vérifiez que les fichiers d'application existent")
     except Exception as e:
         print(f"❌ Erreur lors du lancement: {e}")
 
